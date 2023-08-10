@@ -1,0 +1,20 @@
+{
+    "name": "Extensão Recode",
+    "description": "Gerencia o login da Recode",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["activeTab" , "scripting"  , "storage"],
+    "action":{
+        "default_popup": "index.html",
+        "default_icon": "logo.png"
+    },
+    "content_scripts": [
+        {
+          "js": ["js/pagJS.js"],
+          "matches": [
+                "https://ead.recode.org.br/login/index.php"
+        ]
+        }
+
+    ]
+}
